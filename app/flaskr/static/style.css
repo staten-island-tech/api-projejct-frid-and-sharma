@@ -1,4 +1,13 @@
 body {
     flex-wrap: wrap;
-    background: 
+    background: #323230
+}
+.h1 {
+    color: #fa835a
+}
+.h2 {
+    color: #bcac94
+}
+.h3 {
+    color: #e0ddcd
 }

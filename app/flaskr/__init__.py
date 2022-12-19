@@ -1,5 +1,5 @@
 import os
-
+from .test import *
 from flask import Flask, render_template
 
 
@@ -25,8 +25,8 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route("/user")
+    @app.route("/")
     def usernameInput():
-        return render_template('base.html')
+        return render_template('user.html')
 
     return app
