@@ -1,6 +1,7 @@
-import os
 import requests
 import json
+import os
+from .api import *
 
 from flask import Flask, render_template
 
@@ -27,8 +28,9 @@ def create_app(test_config=None):
         pass
 
     # a simple page that says hello
-    @app.route("/user")
-    def usernameInput():
-        return render_template('base.html')
+    @app.route('/')
+    def hello():
+        return render_template('index.html', img=img)
 
     return app
+print(img)
