@@ -28,6 +28,9 @@ def create_app(test_config=None):
 
     # a simple page that says hello
     @app.route('/')
+    def user():
+        return render_template('user.html')
+    @app.route('/home')
     def hello():
         return render_template('index.html', img=img)
 
