@@ -62,5 +62,8 @@ body {
     to {transform: scale(1)}
   }
   .button {
-    color: #171615
+    background-color:#feba6c;
+    color: #171615;
+    width: 120px;
+    height: 60px
   }
