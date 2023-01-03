@@ -32,6 +32,10 @@ def create_app(test_config=None):
         return render_template('index.html', img=img)
     @app.route('/generatorpage')
     def hello():
+        response_API = requests.get('https://dog.ceo/api/breeds/image/random')
+        data=response_API.text
+        parse_json=json.loads(data)
+        img=parse_json["message"]
         return render_template('generatorpage.html', img=img)
 
     return app
