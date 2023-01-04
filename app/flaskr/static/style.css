@@ -1,9 +1,9 @@
 body {
     flex-wrap: wrap;
-    background: #171615
+    background: #e0e3ec
 }
 .h1 {
-    color: #fb8350
+    color: #0189d8
 }
 /* The Modal (background) */
 .modal {
@@ -68,8 +68,8 @@ body {
     height: 60px
   }
   .bigredbutton {
-    background-color:firebrick;
-    color:#171615;
+    background-color:#f87376;
+    color:#80e5ff;
     font-size:100px;
     width: 500px;
     height: 250px;
