@@ -30,14 +30,29 @@ def create_app(test_config=None):
     @app.route('/')
     def user():
         return render_template('index.html', img=img)
-    @app.route('/generatorpage')
+    @app.route('/doggo')
     def hello():
         response_API = requests.get('https://dog.ceo/api/breeds/image/random')
         data=response_API.text
         parse_json=json.loads(data)
         img=parse_json["message"]
         return render_template('generatorpage.html', img=img)
+    @app.route('/<breed>')
+    def breed():
+        response_API = requests.get('https://dog.ceo/api/breeds/image/random')
+        data=response_API.text
+        parse_json=json.loads(data)
+        img=parse_json["message"]
+        return render_template('breedgetter.html', img=img)
 
+    @app.route('/test', methods =["GET", "POST"])
+    def gfg():
+        if request.method == "POST":
+            first_name = request.form.get("fname")
+            last_name = request.form.get("lname")
+            return "Your name is "+first_name + last_name
+        return render_template("form.html")
+    
     return app
 print(img)
 
