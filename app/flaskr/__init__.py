@@ -36,7 +36,7 @@ def create_app(test_config=None):
         data=response_API.text
         parse_json=json.loads(data)
         img=parse_json["message"]
-        return render_template('generatorpage.html', img=img)
+        return render_template('doggo.html', img=img)
     @app.route('/<breed>')
     def breed():
         response_API = requests.get('https://dog.ceo/api/breeds/image/random')
@@ -44,14 +44,6 @@ def create_app(test_config=None):
         parse_json=json.loads(data)
         img=parse_json["message"]
         return render_template('breedgetter.html', img=img)
-
-    @app.route('/test', methods =["GET", "POST"])
-    def gfg():
-        if request.method == "POST":
-            first_name = request.form.get("fname")
-            last_name = request.form.get("lname")
-            return "Your name is "+first_name + last_name
-        return render_template("form.html")
     
     return app
 print(img)
