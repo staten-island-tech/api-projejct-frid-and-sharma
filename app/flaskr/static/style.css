@@ -1,9 +1,9 @@
 body {
     flex-wrap: wrap;
-    background: #171615
+    background: #e0e3ec
 }
 .h1 {
-    color: #fb8350
+    color: #0189d8
 }
 /* The Modal (background) */
 .modal {
@@ -66,4 +66,20 @@ body {
     color: #171615;
     width: 120px;
     height: 60px
+  }
+  .bigredbutton {
+    background-color:#f87376;
+    color:#80e5ff;
+    font-size:100px;
+    width: 500px;
+    height: 250px;
+    font-family:fantasy;
+  }
+  .buttondiv {
+    text-align: center;
+    height:center;
+    transition: transform .2s;
+  }
+  .buttondiv:hover {
+    transform: scale(1.15); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
