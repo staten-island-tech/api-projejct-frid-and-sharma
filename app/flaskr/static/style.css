@@ -68,11 +68,13 @@ body {
     height: 60px
   }
   .bigredbutton {
+    border-radius: 70px;
+    border: none;
     background-color:#f87376;
     color:#80e5ff;
-    font-size:100px;
-    width: 500px;
-    height: 250px;
+    font-size:45px;
+    width: 250px;
+    height: 125px;
     font-family:fantasy;
   }
   .buttondiv {
