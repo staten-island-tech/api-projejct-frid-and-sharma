@@ -69,20 +69,19 @@ body {
   }
   .bigredbutton {
     background-color:#f87376;
+    border: none ;
+    border-radius: 70px;
     color:#80e5ff;
-    font-size:100px;
-    width: 500px;
-    height: 250px;
+    font-size:45px;
+    width: 250px;
+    height: 125px;
     font-family:fantasy;
   }
   .buttondiv {
     text-align: center;
     height:center;
-    transition: transform .2s;
   }
   .bigredbutton:hover {
     transform: scale(1.15); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  }
-  button {
-    
+    transition: transform .2s;
   }
