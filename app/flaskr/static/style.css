@@ -80,16 +80,23 @@ body {
   .buttondiv {
     text-align: center;
     height:center;
+    margin: 15px;
+    transition: .5s;
   }
   .bigredbutton:hover {
     transform: scale(1.15); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: .5s;
   }
-  img{
-    height: 300px;
-    width: auto;
+  .img{
+    height: 800px;
+    width: auto;  
+    left:500px;
   }
-  .container{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
+  .img-wrapper {
+    display: flex;
+    align-items: center; /**Vertical */
+    justify-content: center; /**Horizontal */
+    height: 800px;
+    flex: 1;
+    width:auto;
   }
