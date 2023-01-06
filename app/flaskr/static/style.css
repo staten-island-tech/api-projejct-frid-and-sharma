@@ -87,9 +87,6 @@ body {
   img{
     height: 300px;
     width: auto;
-  }
-  .container{
-    display:flex;
-    flex-direction: row;
+    display: flex;
     justify-content: center;
   }
