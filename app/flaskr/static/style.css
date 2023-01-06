@@ -84,3 +84,12 @@ body {
   .bigredbutton:hover {
     transform: scale(1.15); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
+  img{
+    height: 300px;
+    width: auto;
+  }
+  .container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+  }
