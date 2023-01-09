@@ -37,14 +37,13 @@ def create_app(test_config=None):
         parse_json=json.loads(data)
         img=parse_json["message"]
         return render_template('doggo.html', img=img)
-    @app.route('/<breed>')
-    def breed():
-        response_API = requests.get('https://dog.ceo/api/breeds/image/random')
+    @app.route('/doggo/<path:breed>')
+    def getbreed(breed):
+        response_API = requests.get(f'https://dog.ceo/api/breed/{breed}/images/random')
         data=response_API.text
         parse_json=json.loads(data)
         img=parse_json["message"]
         return render_template('breedgetter.html', img=img)
-    
     return app
 print(img)
 
