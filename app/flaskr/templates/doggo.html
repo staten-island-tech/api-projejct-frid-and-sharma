@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="/doggo">Random Dog</a>
+      {% for thing in breeds%}
+        <a href="/doggo/{{thing}}">{{thing}}</a>
+        {%endfor%}
+    </div>
+  </div>
+  
 <div class="img-wrapper">
     <img class="img" src="{{img}}">
 </div>

@@ -2,6 +2,7 @@ import requests
 import json
 import os
 from .api import *
+from .testbreed import *
 from flask import Flask, render_template
 
 
@@ -36,7 +37,7 @@ def create_app(test_config=None):
         data=response_API.text
         parse_json=json.loads(data)
         img=parse_json["message"]
-        return render_template('doggo.html', img=img)
+        return render_template('doggo.html', img=img, breeds=breeds)
     @app.route('/doggo/<path:breed>')
     def getbreed(breed):
         response_API = requests.get(f'https://dog.ceo/api/breed/{breed}/images/random')
