@@ -44,6 +44,13 @@ def create_app(test_config=None):
         parse_json=json.loads(data)
         img=parse_json["message"]
         return render_template('breedgetter.html', img=img)
+    @app.route('/history')
+    def history():
+        return render_template('history.html', img=img)
+    @app.route('/random')
+    def random():
+        return render_template('random.html', img=img)
+
     return app
 print(img)
 
