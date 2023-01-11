@@ -1,10 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="dropdown">
+    <button class="dropbtn">Menu</button>
+    <div class="dropdown-content">
+      <a href="/doggo">Random Dog</a>
+      {% for thing in breeds%}
+        <a href="/doggo/{{thing}}">{{thing}}</a>
+        {%endfor%}
+    </div>
+  </div>
+  <a href="/"><button class="homebutt"> <img class="houseimg"src="../static/clearhouse.png"></button></a>
 <div class="img-wrapper">
     <img class="img" src="{{img}}">
 </div>
-<h1>{{img}}</h1>
+<!-- <h1>{{img}}</h1> -->
 <div class="buttondiv">
     <button onClick="window.location.reload();" class="bigredbutton" >CLICK FOR DOG</button>
 </div>

@@ -93,7 +93,7 @@ body {
     transition: .5s;
   }
   .img{
-    height: 800px;
+    height: 600px;
     width: auto;  
     left:500px;
   }
@@ -119,21 +119,11 @@ body {
   width: 120px
 }
 
-.dropbton {
-  background-color: #f87376;
-  color: #80e5ff;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 10px;
-}
- 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
@@ -146,7 +136,6 @@ body {
   border: none;
   border-radius: 10px;
 }
-
 
 /* Links inside the dropdown */
 .dropdown-content a {
@@ -165,13 +154,72 @@ body {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #0189d8;}
 
+.dropbton {
+  background-color: #f87376;
+  color: #80e5ff;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+}
+ 
+/* The container <div> - needed to position the dropdown content */
+.dropdownb {
+  position: relative;
+  display: inline-block;
+}
+ 
+/* Dropdown Content (Hidden by Default) */
+.dropdown-contentb {
+  display: none;
+  position: absolute;
+  background-color: #f2a4a5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border: none;
+  border-radius: 10px;
+}
+ 
+/* Links inside the dropdown */
+.dropdown-contentb a {
+  color: #a8e9f9;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+ 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd; color:#0189d8}
+.dropdown-contentb a:hover {background-color: #ddd; color:#0189d8}
  
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdownb:hover .dropdown-contentb {display: block;}
  
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #0189d8;}
+.dropdownb:hover .dropbton {background-color: #0189d8;}
+
+.homebutt {
+  height: 75px;
+  width: 75px;
+  background-color: #e0e3ec;
+  color:#80e5ff;
+  font-family: fantasy;
+  font-size: 35px;
+  border: none;
+  border-radius: 10px;
+  float:right;
+}
 
 
+.houseimg {
+  height: 50px;
+  width: 50px;
+}
+
+.alignhomebutt {
+  float: right;
+}
+
+.alignhomebutt:hover {
+  transform: rotate(360deg);
+}

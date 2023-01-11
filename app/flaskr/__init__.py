@@ -44,7 +44,7 @@ def create_app(test_config=None):
         data=response_API.text
         parse_json=json.loads(data)
         img=parse_json["message"]
-        return render_template('breedgetter.html', img=img)
+        return render_template('breedgetter.html', img=img, breeds=breeds)
     @app.route('/history')
     def history():
         return render_template('history.html', img=img)
