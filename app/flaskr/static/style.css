@@ -125,7 +125,9 @@ body {
   float:right;
 }
 .homebutt:hover{
-  cursor: default; transform: rotate(360deg); transition: all 2s ease-in-out 0s; animation-iteration-count:infinite; 
+  cursor: default;
+  transform: rotate(360deg); 
+  transition: all 2s ease-in-out 0s;
 }
 .alignhomebutt {
   float: right;
