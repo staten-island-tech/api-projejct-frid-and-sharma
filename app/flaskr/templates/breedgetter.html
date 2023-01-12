@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="dropdown">
-    <button class="dropbtn">Menu</button>
+    <button class="dropbtn">Sort By Breed</button>
     <div class="dropdown-content">
       <a href="/doggo">Random Dog</a>
       {% for thing in breeds%}
@@ -10,7 +10,9 @@
         {%endfor%}
     </div>
   </div>
-  <a href="/"><button class="homebutt"> <img class="houseimg"src="../static/clearhouse.png"></button></a>
+</div>
+<div class="alignhomebutt">  <a href="/"><button class="homebutt"> <img class="houseimg"src="../static/images/clearhouse.png"></button></a>
+</div>
 <div class="img-wrapper">
     <img class="img" src="{{img}}">
 </div>
