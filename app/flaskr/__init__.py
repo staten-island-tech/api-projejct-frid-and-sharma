@@ -53,5 +53,4 @@ def create_app(test_config=None):
         return render_template('random.html', img=img)
 
     return app
-print(img)
 
