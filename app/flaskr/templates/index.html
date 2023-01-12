@@ -2,16 +2,28 @@
 
 {% block content %}
 <img class="doge" src="../static/images/cool doge.png">
-<div class="dropdown">
-  <div class="dropdowntextcenter">  <button class="dropbtn">Menu</button>
-  </div>
-  <div class="dropdown-content">
-    <a href="/doggo">Random Dog</a>
-    <a href="/doggo/<path:breed>">Dog By Breed</a>
-    <a href="/history">History of Dog Breeds</a>
-    <a href="/random">Random Dog Facts</a>
-  </div>
-</div>
+<nav>
+  <menu>
+    <menuitem id="demo1">
+      <a>Menu</a>
+      <menu>
+        <menuitem><a href="/doggo">Random Dog</a></menuitem>
+             <menuitem>
+                <a>Dog by Breed</a>
+                <menu>
+                  {% for thing in breeds%}
+                      <menuitem><a href="/doggo/{{thing}}">{{thing}}</a></menuitem>
+                      {%endfor%}
+                </menu>  
+             </menuitem>
+        <menuitem><a>History of Dogs</a></menuitem>
+        <menuitem id="demo2">
+          <a>Dog Facts</a>
+        </menuitem>
+      </menu>
+    </menuitem>
+  </menu>
+</nav>
 <div class="center">
   <h1 class="h1">Welcome to Frid and Sharma's astounding and amazing dog generator! Feel free to take a look around this gorgeous home page, and then when you're ready, click on the button below: </h1>
 </div>
