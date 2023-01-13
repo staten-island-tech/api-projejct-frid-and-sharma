@@ -88,15 +88,14 @@ body {
     transition: .5s;
   }
   .img{
-    height: 800px;
-    width: auto;  
-    left:500px;
+    height: 300px;
+    width: auto;
   }
   .img-wrapper {
     display: flex;
     align-items: center; /**Vertical */
     justify-content: center; /**Horizontal */
-    height: 800px;
+    height: 300px;
     flex: 1;
     width:auto;
   }
