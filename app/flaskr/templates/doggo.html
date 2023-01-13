@@ -6,7 +6,7 @@
     <div class="dropdown-content">
       <a href="/doggo">Random Dog</a>
       {% for thing in breeds%}
-        <a href="/doggo/{{thing}}">{{thing}}</a>
+        <a href="/doggo/{{thing}}">{{thing.capitalize()}}</a>
         {%endfor%}
     </div>
   </div>
