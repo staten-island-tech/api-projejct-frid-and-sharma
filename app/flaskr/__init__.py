@@ -2,6 +2,7 @@ import requests
 import json
 import os
 from .api import *
+from .testbreed import *
 from flask import Flask, render_template
 
 
@@ -29,22 +30,27 @@ def create_app(test_config=None):
     # a simple page that says hello
     @app.route('/')
     def user():
-        return render_template('index.html', img=img)
+        return render_template('index.html', img=img, breeds=breeds)
     @app.route('/doggo')
     def hello():
         response_API = requests.get('https://dog.ceo/api/breeds/image/random')
         data=response_API.text
         parse_json=json.loads(data)
         img=parse_json["message"]
-        return render_template('doggo.html', img=img)
-    @app.route('/bybreed/<path:breed>')
-    def breed():
-        response_API = requests.get(f'https://dog.ceo/api/breeds/{breed}/image/random')
+        return render_template('doggo.html', img=img, breeds=breeds)
+    @app.route('/doggo/<path:breed>')
+    def getbreed(breed):
+        response_API = requests.get(f'https://dog.ceo/api/breed/{breed}/images/random')
         data=response_API.text
         parse_json=json.loads(data)
         img=parse_json["message"]
-        return render_template('breedgetter.html', img=img)
-    
+        return render_template('breedgetter.html', img=img, breeds=breeds)
+    @app.route('/history')
+    def history():
+        return render_template('history.html', img=img)
+    @app.route('/random')
+    def random():
+        return render_template('random.html', img=img)
+
     return app
-print(img)
 

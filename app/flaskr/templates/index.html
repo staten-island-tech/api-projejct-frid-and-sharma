@@ -1,11 +1,51 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1 class="h1">Welcome to Frid and Sharma's astounding and amazing dog generator! Feel free to take a look around this gorgeous home page, and then when you're ready, click on the BIG RED BUTTON below: </h1>
+<img class="doge" src="../static/images/cool doge.png">
+<nav>
+  <menu>
+    <menuitem id="demo1">
+      <a>Menu</a>
+      <menu>
+        <menuitem><a href="/doggo">Random Dog</a></menuitem>
+             <menuitem>
+                <a>Dog by Breed</a>
+                <menu>
+                  {% for thing in breeds%}
+                      <menuitem><a href="/doggo/{{thing}}">{{thing}}</a></menuitem>
+                      {%endfor%}
+                </menu>  
+             </menuitem>
+        <menuitem><a>History of Dogs</a></menuitem>
+        <menuitem id="demo2">
+          <a>Dog Facts</a>
+        </menuitem>
+      </menu>
+    </menuitem>
+  </menu>
+</nav>
+<div class="center">
+  <h1 class="h1">Welcome to Frid and Sharma's astounding and amazing dog generator! Feel free to take a look around this gorgeous home page, and then when you're ready, click on the button below: </h1>
+</div>
 <div class="buttondiv">
     <a href="/doggo"> <button class="bigredbutton" >CLICK FOR DOG</button> </a>
 </div>
-
+<!-- <img class="nodoggos" src="../static/images/nodoggos.jpeg">
+<img class="supreme" src="../static/images/doggosupreme.jpeg">
+<div align="bottom" class="danacenter">
+  <img align="bottom" class="dana" src="../static/images/dana.jpg">
+</div> -->
+<div class="photo-div">
+  <div class="supreme-div">
+    <img class="supreme" src="../static/images/doggosupreme.jpeg">
+  </div>
+  <div class="dana-div">
+    <img class="dana" src="../static/images/dana.jpg">
+  </div>
+  <div class="nodoggos-div">
+    <img class="nodoggos" src="../static/images/nodoggos.jpeg">
+  </div>
+</div>
 
 
 
