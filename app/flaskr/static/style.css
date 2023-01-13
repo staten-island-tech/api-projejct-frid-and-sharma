@@ -237,10 +237,7 @@ nav > menu > menuitem menuitem menu {
   top:0; right:0;
 }
 
-#scroll {
-  max-height: 500px;
-  overflow: auto; 
-}
+
 
 nav { 
   margin-top: 40px;

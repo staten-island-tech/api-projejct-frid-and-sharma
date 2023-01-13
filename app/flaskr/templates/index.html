@@ -12,7 +12,7 @@
                 <a>Dog by Breed</a>
                 <menu id="scroll">
                   {% for thing in breeds%}
-                      <menuitem><a href="/doggo/{{thing}}">{{thing}}</a></menuitem>
+                      <menuitem><a href="/doggo/{{thing}}">{{thing.capitalize()}}</a></menuitem>
                       {%endfor%}
                 </menu>  
              </menuitem>
