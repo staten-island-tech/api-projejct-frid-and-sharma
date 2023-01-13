@@ -220,6 +220,11 @@ nav > menu { display:flex; }
 nav > menu > menuitem { pointer-events: all; opacity:1; }
 menu menuitem a { white-space:nowrap; display:block; }
   
+#scroll::-webkit-scrollbar {
+  display: none;
+  overflow: auto;
+  max-height: 500px;
+}
 menuitem:hover > menu {
   pointer-events:initial;
 }
@@ -231,9 +236,11 @@ nav > menu > menuitem menuitem menu {
   transform:translateX(100%);
   top:0; right:0;
 }
-/* User Styles Below Not Required */
-/* User Styles Below Not Required */
-/* User Styles Below Not Required */
+
+#scroll {
+  max-height: 500px;
+  overflow: auto; 
+}
 
 nav { 
   margin-top: 40px;

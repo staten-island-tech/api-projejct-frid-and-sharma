@@ -10,7 +10,7 @@
         <menuitem><a href="/doggo">Random Dog</a></menuitem>
              <menuitem>
                 <a>Dog by Breed</a>
-                <menu>
+                <menu id="scroll">
                   {% for thing in breeds%}
                       <menuitem><a href="/doggo/{{thing}}">{{thing}}</a></menuitem>
                       {%endfor%}
