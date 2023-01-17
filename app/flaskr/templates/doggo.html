@@ -3,20 +3,29 @@
 {% block content %}
 
 <nav>
-  <menu id="scroll">
-    <menuitem>
-      <a>Sort By Breed</a>
+  <menu>
+    <menuitem id="demo1">
+      <a>Menu</a>
       <menu>
         <menuitem><a href="/doggo">Random Dog</a></menuitem>
-        {% for thing in breeds%}
-            <menuitem><a href="/doggo/{{thing}}">{{thing.capitalize()}}</a></menuitem>
-          {%endfor%}
+             <menuitem>
+                <a>Dog by Breed</a>
+                <menu id="scroll">
+                  {% for thing in breeds%}
+                      <menuitem><a href="/doggo/{{thing}}">{{thing.capitalize()}}</a></menuitem>
+                      {%endfor%}
+                </menu>  
+             </menuitem>
       </menu>
-    </menuitem>
   </menu>
 </nav>
-  <div class="alignhomebutt">  <a href="/"><button class="homebutt"> <img class="houseimg"src="../static/images/clearhouse.png"></button></a>
-  </div>
+<div class="alignhomebutt">  
+  <a href="/"><button class="homebutt"> 
+    <img class="houseimg"src="../static/images/clearhouse.png">
+  </button>
+</a>
+</div>
+
 <div class="img-wrapper">
     <img class="img" src="{{img}}">
 </div>
