@@ -44,7 +44,9 @@ def create_app(test_config=None):
             response_API = requests.get(f'https://dog.ceo/api/breed/{breed}/images/random')
             data=response_API.text
             parse_json=json.loads(data)
-            img=parse_json["message"]
+            img=parse_json["message"] 
+            print(img)
+            print(parse_json)
             return render_template('doggo.html', img=img, breeds=breeds)
         else: return ('NOOOO')
     @app.route('/history')
@@ -52,7 +54,11 @@ def create_app(test_config=None):
         return render_template('history.html', img=img)
     @app.route('/random')
     def random():
-        return render_template('random.html', img=img)
+        response_API2 = requests.get(f'https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1')
+        data2=response_API2.text
+        parse_json2=json.loads(data2)
+        fact=parse_json2["fact"] 
+        return render_template('random.html', fact=fact)
 
     return app
 
