@@ -1,7 +1,37 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<nav>
+    <menu>
+      <menuitem id="demo1">
+        <a>Menu</a>
+        <menu>
+          <menuitem><a href="/doggo">Random Dog</a></menuitem>
+               <menuitem>
+                  <a>Dog by Breed</a>
+                  <menu id="scroll">
+                    {% for thing in breeds%}
+                        <menuitem><a href="/doggo/{{thing}}">{{thing.capitalize()}}</a></menuitem>
+                        {%endfor%}
+                  </menu>  
+               </menuitem>
+          <menuitem><a href="/history">History of Dogs</a></menuitem>
+          <menuitem id="demo2">
+            <a href="/random"> Random Dog Facts</a>
+          </menuitem>
+        </menu>
+      </menuitem>
+    </menu>
+  </nav>
+    <div class="alignhomebutt">  <a href="/"><button class="homebutt"> <img class="houseimg"src="../static/images/clearhouse.png"></button></a>
+    </div>
+  <div class="text-wrapper">
+      <img class="text" src="{{text}}">
+  </div>
+  <div class="buttondiv">
+      <button onClick="window.location.reload();" class="bigredbutton" >CLICK FOR FACT</button>
+  </div>
+  
 
 
 
