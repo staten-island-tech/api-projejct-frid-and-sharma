@@ -62,11 +62,12 @@ body {
   border-radius: 5px;
 }
 .img-wrapper {
-  text-align: center;
+  display: flex;
+  align-items: center; /**Vertical */
+  justify-content: center; /**Horizontal */
   height: 600px;
   flex: 1;
   width:auto;
-  padding: -5px;
 }
   /* Dropdown Button */
 .dropbtn {
@@ -123,19 +124,21 @@ body {
   background-color: #ffffeb;
   border: none;
   border-radius: 10px;
-  float:right;
   transition: all 2s ease-in-out 0s;
+  position: absolute;
+    right: 20px;
+    z-index:1000;
+    float: right;
+    top: 20px;
 }
 .homebutt:hover{
   cursor: default; 
   transform: rotate(360deg);
   animation-iteration-count:infinite; 
 }
-
 .alignhomebutt {
   float: right;
 }
-
 .houseimg {
   height: 50px;
   width: 50px
@@ -213,6 +216,7 @@ nav menuitem {
   opacity:0;
   cursor:pointer;
 }
+
 
 nav menuitem > menu {
   position: absolute;
@@ -315,3 +319,4 @@ menuitem > menu > menuitem.hover > menu > menuitem{
   transform:translateX(0) translateY(0%);
   opacity: 1;
 }
+

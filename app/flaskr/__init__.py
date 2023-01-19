@@ -42,13 +42,14 @@ def create_app(test_config=None):
     def getbreed(breed):
         if breed in breeds:
             response_API = requests.get(f'https://dog.ceo/api/breed/{breed}/images/random')
-            data=response_API.text
+            data=response_API.read()
             parse_json=json.loads(data)
             img=parse_json["message"] 
             print(img)
             print(parse_json)
             return render_template('doggo.html', img=img, breeds=breeds)
-        else: return ('NOOOO')
+        else: 
+            return render_template('error.html')
     @app.route('/history')
     def history():
         return render_template('history.html', img=img)
